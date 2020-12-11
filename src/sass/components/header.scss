@@ -1,0 +1,343 @@
+.header {
+    position: relative;
+    margin-bottom: 56px;
+    width: 100%;
+    height: 613px;
+    background-color: $background-color-dark;
+    background-image: url(../../images/Layer_header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $primary-white-color;
+    // font-family: $primary-font-family;
+    padding-top: 15px;
+}
+
+.background_container {
+    position: relative;
+    
+    &::after {
+        content: 'GoIT';
+        display: block;
+        font-size: 120px;
+        font-weight: 900;
+        color: rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .header {
+        background-image: url(../../images/Layer_header@2x.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.site_nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.menu {
+    display: block;
+    width: 20px;
+    height: 30px;
+    background: url(../../images/burg_menu.png) no-repeat;
+    background-size: contain;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .menu {
+    background: url(../../images/burg_menu@2x.png) no-repeat;
+    background-size: contain;
+  }
+}
+
+.header_heading {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+    text-align: center;
+    width: 255px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.header_text-wrap {
+    width: 400px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+    margin-bottom: 20px;
+
+    &::before {
+        content: '<';
+        font-size: 23px;
+        font-weight: 900;
+        color: $secondary--accent-color;
+        position: absolute;
+        top: 0; left: 0;
+    }
+
+    &::after {
+        content: '/>';
+        font-size: 23px;
+        font-weight: 900;
+        color: $secondary--accent-color;
+        position: absolute;
+        bottom: 0; right: 0;
+    }
+}
+
+.header_text {
+    font-size: $paragraf-font-size;
+    font-weight: 600;
+    text-align: center;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.header_text-bold {
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 0 36px;
+}
+
+.header_text-grey {
+    color: $secondary-light-color;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+}
+
+.flex_item1 {
+    margin-bottom: 120px;
+}
+
+.flex_item2 {
+    width: 400px;
+    margin: 0 auto 36px;
+}
+
+.button_header {
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    .background_img-container, 
+    .socials {
+        display: none;
+    }
+
+    .site_nav, 
+    .header_container-socials {
+        width: 480px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        height: 476px;
+    }
+
+    .background_container {
+        &::after {
+            font-size: 236px;
+        }
+    }
+
+    .site_nav, 
+    .header_container-socials {
+        width: 670px;
+        margin: 0 auto 48px;
+    }
+
+    .background_img-container {
+        width: 670px;
+        height: 420px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-30%);
+        z-index: 5;
+        overflow: hidden;
+    }
+
+    .background_img {
+        min-width: 360px;
+        min-height: 420px;
+        object-fit: cover;
+    }
+
+    .header_container-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    
+    .header_container-socials {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        &::before {
+            content: '01 \005F';
+            display: block;
+            width: 40px;
+            height: 15px;
+            transform: rotate(-90deg);
+            position: absolute;
+        }
+    }
+
+    .header_heading {
+        font-size: 45px;
+        line-height: 56px;
+        width: 356px;
+        margin-right: 100px;
+        text-align: left;
+
+        & span {
+          display: block;
+        }
+
+        & span::before {
+            content: '\2014';
+        }
+    }
+
+    .header_text-wrap {
+        width: 240px;
+        margin: 0;
+        padding-left: 40px;
+        
+        &::before {
+            font-size: 13px;
+            padding-left: 20px;
+        }
+
+        &::after {
+            font-size: 13px;
+        }
+    }
+
+    .flex_item1 {
+        margin-bottom: 24px;
+        z-index: 10;
+    }
+
+    .flex_item2 {
+        width: 160px;
+        z-index: 5;
+    }
+
+    .header_text-bold {
+        font-size: 11px;
+        line-height: 17px;
+        margin: 0 0 20px;
+    }
+
+    .header_text-grey {
+        font-size: 10px;
+        line-height: 13px;
+        margin-bottom: 80px;
+    }
+
+    .header_text {
+        font-size: 8px;
+        line-height: 13px;
+        text-align: left;
+    }
+
+    .flex_item3 {
+        padding-left: 40px;
+    }
+
+    .button_header {
+        margin: 0;
+    }
+
+    .socials {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        right: 0;
+        bottom: 80px;
+
+    & li:nth-child(1) {
+        margin-right: 10px;
+    }
+
+    & svg {
+        display: block;
+        width: 10px;
+        height: 15px;
+        fill: white;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+    .header {
+        height: 530px;
+    }
+
+    .site_nav, 
+    .header_container-socials {
+        width: 1130px;
+    }
+
+    .header_heading {
+        font-size: 50px;
+        line-height: 63px;
+        width: 394px;
+    }
+
+    .header_text {
+        font-size: 9px;
+        line-height: 15px;
+    }
+
+    .header_text-bold {
+        line-height: 19px;
+    }
+
+    .header_text-grey {
+        line-height: 15px;
+    }
+
+    .header_container-socials {
+
+        &::before {
+            font-size: 15px;
+        }
+        
+        &::after {
+            content: '02.';
+            font-size: 9px;
+            position: absolute;
+            top: 10px;
+            left:44px;
+        }
+    }
+
+    .socials {
+        bottom: 0;
+    }
+}
+
+  

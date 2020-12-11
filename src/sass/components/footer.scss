@@ -1,0 +1,133 @@
+/*container*/
+// @media(max-width:479px){
+//   .footer-container {
+//     flex-wrap: wrap;
+//     width: 315px;
+// }
+// .footer-socials {
+//   display: none;
+// }
+
+
+@media(min-width: 480px) and (max-width:767px) {
+   .footer-socials {
+     display: none;
+  }
+  .footer-container {    
+      width: 446px;
+   
+      }
+    }
+
+    
+  @media(min-width:768px) {
+    .footer-container {
+
+      width: 640px;
+    }
+    
+    
+    .footer-socials {
+      display: block;
+    }
+    
+  }
+  
+  
+  @media(min-width:1200px) {
+    .footer-container {
+      width: 714px;
+       }      
+  }
+
+
+
+
+/*footer-1*/
+.footer-container {    
+  display: flex;    
+ align-items: center;
+ justify-content: space-between;
+ margin: 0 auto;
+ padding: 0;}
+
+.footer__wrapper {
+  padding: 18px;
+  background-color: $background-color-dark;
+  width: 100%;
+  margin: 0 auto;
+  // height: 105px;
+  border-bottom: 1px solid #a2a2a2;
+}
+.footer__list {
+  @extend %list;
+  text-align: left;
+}
+
+.footer__item {
+  width: 85px;
+  line-height: 9px;
+  padding-top: 12px;
+}
+
+.footer__link {
+  @extend %link;
+  font-family: $primary-font-family;
+  font-size: 9px;
+  color: #a2a2a2;
+  margin: 0;
+}
+
+.footer__title {
+  font-family: $primary-font-family;
+  font-size: 9px;
+  letter-spacing: 1px;
+  line-height: normal;
+  color: $primary-white-color;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.footer-socials__link {
+  @extend %link;
+  display: block;
+  font-size: 10px;
+  line-height: 16px;
+  color: $primary-white-color;
+  font-family: $primary-font-family;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/*footer-2*/
+.footer-2__wrapper {
+  display: flex;
+  background-color: #202020;
+  padding-bottom: 4px;
+}
+
+
+.footer-2__list {
+  @extend %list;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  margin: 0;
+}
+
+.footer-2__link {
+  @extend %link;
+  font-size: 6px;
+  font-family: "Gilroy";
+  color: #65666a;
+  line-height: 16px;
+  text-align: left;
+  margin-right: 10px;
+
+}
+
+.ra-logo {
+  margin: 10px 0 0;
+}
